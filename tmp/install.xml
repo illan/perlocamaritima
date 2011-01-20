@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0">
+	<name>Cuotas</name>
+	<!-- The following elements are optional and free of formatting conttraints -->
+	<creationDate>2011-02-01</creationDate>
+	<author>Illan Palao</author>
+	<authorEmail>illanpalao@gmail.com</authorEmail>
+	<authorUrl>http://www.perlocamaritima.org</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<!--  The version string is recorded in the components table -->
+	<version>4.01</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>Pago de cuotas de los socios</description>
+
+	<!-- Site Main File Copy Section -->
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>cuotas.php</filename>
+		<filename>index.html</filename>
+		<filename>models/cuota.php</filename>
+		<filename>views/cuota/index.html</filename>
+		<filename>views/cuota/view.html.php</filename>
+		<filename>views/cuota/tmpl/index.html</filename>
+		<filename>views/cuota/tmpl/default.php</filename>
+		<filename>views/index.html</filename>
+	</files>
+
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">install.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">uninstall.sql</file>
+		</sql>
+	</uninstall>	
+	
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu>Gestion Pagos</menu>
+		
+		<!-- Administration Main File Copy Section -->
+		<!-- Note the folder attribute: This attribute describes the folder
+			to copy FROM in the package to install therefore files copied
+			in this section are copied from /admin/ in the package -->
+		<files folder="admin">
+			<!-- Site Main File Copy Section -->
+			<filename>cuotas.php</filename>
+			<filename>install.sql</filename>
+			<filename>uninstall.sql</filename>
+			<filename>controller.php</filename>
+			<filename>controllers/cuota.php</filename>
+			<filename>controllers/index.html</filename>
+			<filename>models/cuotas.php</filename>
+			<filename>models/cuota.php</filename>
+			<filename>models/index.html</filename>
+			<filename>tables/cuota.php</filename>
+			<filename>tables/index.html</filename>
+			<filename>views/cuota/view.html.php</filename>
+			<filename>views/cuota/tmpl/form.php</filename>
+			<filename>views/cuota/index.html</filename>
+			<filename>views/cuota/tmpl/index.html</filename>
+			<filename>views/cuotas/view.html.php</filename>
+			<filename>views/cuotas/index.html</filename>
+			<filename>views/cuotas/tmpl/default.php</filename>
+			<filename>views/cuotas/tmpl/index.html</filename>
+		</files>		
+	</administration>
+</install>
